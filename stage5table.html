@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage5- Multiples of 6</title>
+    <style>
+        body{
+            color: aqua; font-weight: 900; font-size: 200%; text-align: center; background-color: black;
+        }
+        h1{
+            color:pink; font-style: italic; font-size: 60px;
+        }
+        em{
+            color: rgb(231, 108, 25);
+        }
+        .testIntroButton,.goToTestButton,.startTestButton{
+            border-radius: 20px; color: rgb(255, 6, 47); background-color: aqua; padding: 10px; width:150px; font-size: 15px; font-weight: 900; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="topNote" id="topNote">
+        Let's learn multiplication....    <em>Yipee!!!</em>
+   </h1>
+<div class="calculations">
+    <div>
+        <script>
+    //Please note that the JS code is not on a separate file because each page has iits own particular JS code. not shared with another page. To upgrade the levels, just change the figure in line 34 and 35.
+
+    for(var k=1; k<=12; k++){
+    const g = k*6;
+    document.write(k,  ' * 6 = ', g, '<br>')
+}
+
+        </script>
+    </div>
+    <div class="testIntro">
+    <button class="testIntroButton" id="testIntroButton">
+        DONE
+    </button>
+    <p id="iAmDoneDisplay" class="iAmDoneDisplay">
+        
+    </p>
+
+    <script>
+        const iAmDone = document.getElementById('testIntroButton');
+        const testIntroDisplay = document.getElementById('iAmDoneDisplay');
+
+        const testIntro = "You have learnt the multipliers of 6. Now move on to test what you have learnt";
+
+        iAmDone.addEventListener('click', function(){
+            testIntroDisplay.textContent = testIntro
+        });
+    </script>
+    <a href="stage5game.html"><button class="startTestButton">Start Test</button></a>
+    </div>
+
+</div>
+</div>
+</body>
+</html>

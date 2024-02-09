@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplier Game For Kids</title>
+<style>
+
+    body{
+        text-align: center; background-color: black; 
+    }
+    h1{
+        color:pink; font-style: italic; font-size: 60px;
+    }
+.container{
+    font-size: 200px; display: flex; flex-direction: row; color:white;
+}
+.multiplyer,.randomNumber{
+    height: 250px; width: 200px; background-color: black; color: aqua; margin-left: 40px; margin-right: 40px;
+}
+em{
+    color: rgb(231, 108, 25);
+}
+.stageTellerOuter,.answerIntro{
+    color: rgb(247, 45, 78); font-size:30px;  width: 80%;  height: 50px; padding-left: 20%; display: flex;
+}
+.stageTeller{
+    background: aqua; border-radius: 20px; font-weight: 900; width: 80%; margin-right: 2%;
+}
+.answerDisplay{
+    color: rgb(247, 45, 78); font-size:200px; padding-left:10%;
+}
+.displayButton,.nextButton,.nextStageButton{
+    border-radius: 20px; color: rgb(255, 6, 47); background-color: aqua; padding: 15px; width:150px; font-size: 15px; font-weight: 900; margin-left: 80px;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<script>
+    //To scale the levels, change stageMultiplier, Number in the alert function and the text in line 58
+    const numberset = ['1','2','3','4','5','6','7','8','9','10','11','12'];
+    
+    function randomcalculator(){
+        const  generated = Math.floor(Math.random()*numberset.length)
+        return generated
+    }
+    const generatedNumber = randomcalculator();
+</script>
+
+
+
+
+    <h1 class="topNote" id="topNote">
+         Let's learn multiplication....    <em>Yipee!!!</em>
+    </h1>
+
+    <div class="stageTellerOuter">
+        <div id="stageTeller" class="stageTeller"> 
+        Stage 1: Let's do multipliers of 2 
+        </div>
+        <div class="nextStage"> 
+            <a href="stage2table.html"> <button id="nextStageButton" class="nextStageButton">
+                next stage >>
+            </button> 
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="multiplyer" class="multiplyer">
+            2
+        </div>
+        *
+        <div class="randomNumber" id="randomNumber">
+            <script>
+                document.write(generatedNumber);
+            </script>
+        </div>
+        = ?
+    </div>
+
+    <div class="next" id="next">
+
+        <a href="index.html"><button class="nextButton">Back to the table</button></a>
+
+        <a href="multiplicationGame.html"><button id="nextButton" class="nextButton">Next</button></a>
+
+    </div>
+
+
+
+</body>
+</html>
